@@ -15,7 +15,6 @@ public class TodoService {
     }
 
     public void addTodos(Todo todo){
-        System.out.println(todo);
         todos.add(new Todo(todo.message(),todo.author()));
     }
 }

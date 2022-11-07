@@ -12,23 +12,21 @@ public class TodoListController {
 
     private final TodoService todoService;
 
-    public TodoListController(TodoService todoService) {
+    private TodoRepository todoRepository;
+
+    public TodoListController(TodoService todoService, TodoRepository todoRepository) {
         this.todoService = todoService;
+        this.todoRepository = todoRepository;
     }
 
     @GetMapping
-    public List<Todo> getTodos(){
-        return todoService.getTodos();
+    public Iterable<TodoEntity> getTodos(){
+        return todoRepository.findAll();
     }
 
     @PostMapping
-    public ResponseEntity<Todo> addTodo(@RequestBody Todo todo){
-        if(todo != null){
-            todoService.addTodos(todo);
-            return new ResponseEntity(HttpStatus.OK);
-        }else{
-            return new ResponseEntity(HttpStatus.BAD_REQUEST);
-        }
+    public TodoEntity addTodo(@RequestBody TodoEntity todo){
+        return todoRepository.save(todo);
 
     };
 }
