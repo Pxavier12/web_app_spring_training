@@ -1,7 +1,7 @@
 # Template for Maven based exercises
 
 [![build workflow](https://github.com/lernejo/maven_starter_template/actions/workflows/build.yml/badge.svg)](https://github.com/lernejo/maven_starter_template/actions)
-[![codecov](https://codecov.io/gh/pxavier12/maven_starter_template/branch/main/graph/badge.svg)](https://codecov.io/gh/pxavier12/maven_starter_template)
+[![codecov](https://codecov.io/gh/pxavier12/web_app_spring_training/branch/main/graph/badge.svg)](https://codecov.io/gh/pxavier12/web_app_spring_training)
 
 ## Build the project
 
